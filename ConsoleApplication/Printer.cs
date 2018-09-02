@@ -59,7 +59,8 @@ namespace ConsoleApplication
 					case 7:
 						ShowFiveCheapestPets();
 						break;
-					default:
+					case 8:
+						Environment.Exit(-1);
 						break;
 				}
 				selection = ShowMenu(menuItems);
@@ -83,9 +84,9 @@ namespace ConsoleApplication
 
 			while (!int.TryParse(Console.ReadLine(), out selection)
 				   || selection < 1
-				   || selection > 7)
+				   || selection > 8)
 			{
-				Console.WriteLine("Please select a number between 1-7");
+				Console.WriteLine("Please select a number between 1-8");
 			}
 
 			return selection;
